@@ -20,8 +20,12 @@ def col_desc(filename, col):
     return filename[col].describe()
 
 
-def col_replace(filename, col, value=None):
+def col_replace(filename, col, v=None):
     ''' Pass parameters according to required datatype
         # example: - filename[col].replace(np.nan/string/random value, value)
     '''
-    filename[col].replace(np.nan, value)
+    return filename[col].replace(np.nan, v)
+
+
+def col_fillna(filename, col, v=None):
+    return filename[col].fillna(v, inplace=True)
