@@ -1,0 +1,19 @@
+The majority of asteroids fall into the following three 
+categories:
+
+     C-type (carbonaceous):  Includes more than 75 percent 
+of known asteroids. Very dark with an albedo of 0.03-0.09. 
+Composition is thought to be similar to the Sun, depleted in 
+hydrogen, helium, and other volatiles. C-type asteroids 
+inhabit the main belt's outer regions.
+
+     S-type (silicaceous):  Accounts for about 17 percent 
+of known asteroids. Relatively bright with an albedo of 
+0.10-0.22. Composition is metallic iron mixed with iron- and 
+magnesium-silicates. S-type asteroids dominate the inner 
+asteroid belt.
+
+     M-type (metallic):  Includes many of the rest of the 
+known asteroids. Relatively bright with an albedo of 0.10-
+0.18. Composition is apparently dominated by metallic iron. 
+M-type asteroids inhabit the main belt's middle region.
