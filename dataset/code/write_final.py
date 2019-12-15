@@ -6,10 +6,11 @@ cluster = Cluster()
 keyspace_name = 'your_keyspace_name'
 session = cluster.connect(keyspace_name)
 
-#Queries
-#NOTE Column-name and type should be similar to that of data to be written
-#session.execute('CREATE TABLE your_tablename (column name and datatype, PRIMARY KEY(name of pks));') #Create table for file
-
+'''
+# Queries
+session.execute('CREATE TABLE your_tablename (column name and datatype, PRIMARY KEY(name of pks));') #Create table for file
+Column-name and type should be similar to that of data to be written
+'''
 session.execute('CREATE TABLE asteroid (row int,full_name text, neo text, moid_jupiter text, moid text, producer text, rot_per int, PRIMARY KEY(row, neo));') #Create table for file
 session.execute('CREATE TABLE mars (doy int, sol int, dew_point text,\
                 relative_humidity text, relative_humidity_m text,\
@@ -23,9 +24,14 @@ session.execute('CREATE TABLE exoplanets (loc_rowid int, pl_hostname text, pl_le
                 st_optband text, st_teff float,st_mass float, st_rad float, rowupdate date, pl_facility text,\
                 fst_logg float, PRIMARY KEY(loc_rowid, pl_letter));')
 
+session.execute('CREATE TABLE Satellite (Name_of_Satellite text,Alternate_Names text, Country/Org_of_UN_Registry text, Country_of_Operator_Owner text, Operator/Owner text,\
+                Users text, Purpose text, Class_of_Orbit text, Perigee__km text, Apogee__km text, Contractor text, Country_of_Contractor text, \
+                Launch_Vehicle text PRIMARY KEY(Name_of_Satellite));')
+
 # CQL CMD works in CSQLSH ONLY
 session.execute('COPY your_tablename (columns names) from path_to_file and HEADER=TRUE') #Write data from file to table
 
+# Fetch and Process
 query = "SELECT * from mars;"
 df = pd.DataFrame(list(session.execute(query)))
 print(df.head(5))
